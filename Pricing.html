@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dealership-IQ | Pricing</title>
+  <meta name="description" content="Explore Dealership-IQ's premium pricing for executive staff intelligence.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #f2f2f2;
+      line-height: 1.65;
+    }
+
+    header {
+      padding: 30px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #1f1f1f;
+    }
+
+    .logo {
+      height: 90px;
+      width: auto;
+      display: block;
+      opacity: 0.95;
+    }
+
+    header nav a {
+      color: #f2f2f2;
+      text-decoration: none;
+      margin-left: 32px;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    header nav a:hover {
+      color: #ffd700;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      font-weight: 500;
+      letter-spacing: -1px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #cfcfcf;
+      max-width: 780px;
+      margin: 0 auto 40px auto;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .plan {
+      background: #141414;
+      border: 1px solid #1f1f1f;
+      padding: 40px 30px;
+      border-radius: 8px;
+      transition: transform 0.3s, border-color 0.3s;
+      text-align: left;
+    }
+
+    .plan:hover {
+      transform: translateY(-5px);
+      border-color: #ffd700;
+    }
+
+    .plan h3 {
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+
+    .plan p {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    .plan ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+    }
+
+    .plan ul li {
+      margin-bottom: 12px;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .plan ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #ffd700;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 14px 34px;
+      border: 1px solid #f2f2f2;
+      text-decoration: none;
+      color: #f2f2f2;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+    }
+
+    .cta:hover {
+      background: #f2f2f2;
+      color: #0a0a0a;
+    }
+
+    footer {
+      border-top: 1px solid #1f1f1f;
+      padding: 40px;
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png.png" alt="Dealership-IQ" class="logo">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="product.html">Product</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="container">
+  <h1>Pricing</h1>
+  <p>Dealership-IQ is built for high-performance dealerships and delivered as a premium, enterprise-level service. Our pricing is personalized based on dealership size and scope to ensure maximum value. Request a private demo to discuss your plan.</p>
+
+  <div class="pricing-grid">
+    <div class="plan">
+      <h3>Enterprise Plan</h3>
+      <p>Comprehensive executive staff intelligence package for large dealerships.</p>
+      <ul>
+        <li>Monthly staff reports</li>
+        <li>Culture & operational risk insights</li>
+        <li>Executive dashboards & analytics</li>
+        <li>Actionable recommendations</li>
+        <li>Secure & confidential</li>
+      </ul>
+      <a class="cta" href="mailto:info@dealership-iq.com">Request a Demo</a>
+    </div>
+
+    <div class="plan">
+      <h3>Custom Plan</h3>
+      <p>Tailored solutions for mid-sized dealerships or specialized reporting needs.</p>
+      <ul>
+        <li>All Enterprise features</li>
+        <li>Custom reporting cadence</li>
+        <li>Integration with internal systems</li>
+        <li>Dedicated account manager</li>
+        <li>Optional additional analytics modules</li>
+      </ul>
+      <a class="cta" href="mailto:info@dealership-iq.com">Request a Demo</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © Dealership-IQ
+</footer>
+
+</body>
+</html>
