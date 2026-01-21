@@ -21,35 +21,30 @@
     /* ================= HEADER ================= */
 
 header {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-  padding: 20px 60px;
   display: flex;
-  flex-wrap: wrap;        /* allow wrapping on small screens */
+  flex-wrap: wrap;           /* allows nav to wrap on small screens */
   justify-content: space-between;
   align-items: center;
+  padding: 16px 60px;
   background: rgba(0,0,0,0.85);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid #1f1f1f;
 }
 
-header nav {
+nav {
   display: flex;
-  flex-wrap: wrap;        /* wrap nav links if needed */
-  gap: 32px;              /* consistent spacing between links */
+  flex-wrap: wrap;           /* wrap nav items if they don't fit */
+  gap: 32px;                 /* space between nav links */
 }
 
-header nav a {
+nav a {
   color: #f2f2f2;
   text-decoration: none;
   font-size: 13px;
   letter-spacing: 1.4px;
   text-transform: uppercase;
-  white-space: nowrap;    /* prevent links from breaking mid-word */
+  white-space: nowrap;       /* prevents splitting words */
 }
-
 
     .brand {
       display: flex;
