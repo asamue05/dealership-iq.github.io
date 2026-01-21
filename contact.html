@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dealership-IQ | Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #f2f2f2;
+      line-height: 1.65;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid #1f1f1f;
+    }
+
+    .logo {
+      height: 90px;
+      width: auto;
+      display: block;
+      opacity: 0.95;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+
+    nav a {
+      color: #f2f2f2;
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* HERO */
+    .hero {
+      background: url('yellowcar.png') center/cover no-repeat;
+      min-height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 14px 34px;
+      border: 1px solid #f2f2f2;
+      text-decoration: none;
+      color: #f2f2f2;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+    }
+
+    .cta:hover {
+      background: #f2f2f2;
+      color: #0a0a0a;
+    }
+
+    /* MAIN CONTACT SECTION */
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 18px;
+      color: #cfcfcf;
+      margin-bottom: 40px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    input, textarea {
+      padding: 14px;
+      border-radius: 6px;
+      border: 1px solid #1f1f1f;
+      background: #141414;
+      color: #f2f2f2;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #888;
+    }
+
+    button {
+      padding: 14px 34px;
+      border: 1px solid #f2f2f2;
+      background: #0a0a0a;
+      color: #f2f2f2;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      transition: all 0.3s;
+      align-self: flex-start;
+    }
+
+    button:hover {
+      background: #ffd700;
+      color: #0a0a0a;
+      border-color: #ffd700;
+    }
+
+    footer {
+      border-top: 1px solid #1f1f1f;
+      padding: 40px;
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 16px 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html"><img src="logo.png.png" alt="Dealership-IQ" class="logo"></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="product.html">Product</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Contact Dealership-IQ</h1>
+    <p>Get in touch with us for a private demo or to discuss your dealership's executive staff intelligence needs.</p>
+    <a class="cta" href="mailto:info@dealership-iq.com">Email Us</a>
+  </div>
+</section>
+
+<!-- MAIN CONTACT FORM -->
+<section class="container">
+  <h1>Send Us a Message</h1>
+  <p>Fill out the form below and one of our team members will respond promptly.</p>
+
+  <form action="mailto:info@dealership-iq.com" method="post" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  © Dealership-IQ
+</footer>
+
+</body>
+</html>
