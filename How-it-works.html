@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dealership-IQ | How It Works</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #f2f2f2;
+      line-height: 1.65;
+    }
+
+    /* ================= HEADER ================= */
+    header {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+      padding: 20px 60px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid #1f1f1f;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+      color: #f2f2f2;
+    }
+
+    .brand img {
+      height: 48px;
+      opacity: 0.95;
+    }
+
+    .brand span {
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+
+    nav a {
+      color: #f2f2f2;
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      position: relative;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0.6)), url("yellowcar.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 120px 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 500;
+      margin-bottom: 16px;
+      max-width: 900px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #cfcfcf;
+      max-width: 720px;
+      margin: auto;
+    }
+
+    /* ================= PROCESS STEPS ================= */
+    .steps {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+    }
+
+    .step {
+      background: #111;
+      border: 1px solid #1f1f1f;
+      padding: 28px;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .step:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(255,255,255,0.05);
+    }
+
+    .step h2 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .step p {
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    /* ================= CTA ================= */
+    .cta {
+      display: inline-block;
+      margin: 60px auto 120px;
+      padding: 14px 34px;
+      border: 1px solid #f2f2f2;
+      text-decoration: none;
+      color: #f2f2f2;
+      font-size: 12px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .cta:hover {
+      background: #f2f2f2;
+      color: #0a0a0a;
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      border-top: 1px solid #1f1f1f;
+      padding: 40px;
+      text-align: center;
+      font-size: 12px;
+      color: #777;
+      background: #0a0a0a;
+    }
+
+    /* ================= MOBILE ================= */
+    @media (max-width: 768px) {
+      header {
+        padding: 16px 24px;
+      }
+      .hero h1 {
+        font-size: 36px;
+      }
+      .hero p {
+        font-size: 16px;
+      }
+      .steps {
+        padding: 0 20px;
+        gap: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="brand">
+    <img src="logo.png.png" alt="Dealership-IQ Logo">
+    <span>Dealership-IQ</span>
+  </a>
+
+  <nav>
+    <a href="product.html">Product</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>How Dealership-IQ Works</h1>
+    <p>Confidential, executive-level insight into staff sentiment, culture, and operational risk — delivered monthly to leadership.</p>
+  </div>
+</section>
+
+<!-- PROCESS STEPS -->
+<section class="steps">
+  <div class="step">
+    <h2>Step 1: Survey</h2>
+    <p>Collect anonymous staff feedback through secure, monthly surveys to identify culture and engagement metrics.</p>
+  </div>
+
+  <div class="step">
+    <h2>Step 2: Analyse</h2>
+    <p>Our algorithms and experts review responses to detect operational risks, sentiment shifts, and opportunities for improvement.</p>
+  </div>
+
+  <div class="step">
+    <h2>Step 3: Report</h2>
+    <p>Leadership receives a confidential, executive-level report highlighting key findings and actionable insights.</p>
+  </div>
+
+  <div class="step">
+    <h2>Step 4: Act</h2>
+    <p>Guided recommendations and dashboards help management make informed, timely decisions to improve performance.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<div style="text-align:center;">
+  <a class="cta" href="mailto:info@dealership-iq.com">Request a Private Demo</a>
+</div>
+
+<footer>
+  © Dealership-IQ
+</footer>
+
+</body>
+</html>
