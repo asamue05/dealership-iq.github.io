@@ -20,19 +20,36 @@
 
     /* ================= HEADER ================= */
 
-    header {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: 10;
-      padding: 32px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(0,0,0,0.85);
-      backdrop-filter: blur(6px);
-      border-bottom: 1px solid #1f1f1f;
-    }
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 20px 60px;
+  display: flex;
+  flex-wrap: wrap;        /* allow wrapping on small screens */
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #1f1f1f;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;        /* wrap nav links if needed */
+  gap: 32px;              /* consistent spacing between links */
+}
+
+header nav a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  white-space: nowrap;    /* prevent links from breaking mid-word */
+}
+
 
     .brand {
       display: flex;
