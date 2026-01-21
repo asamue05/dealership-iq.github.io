@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Dealership-IQ | How It Works</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -15,39 +15,23 @@
       line-height: 1.65;
     }
 
-    /* ================= HEADER ================= */
+    /* HEADER */
     header {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: 10;
-      padding: 20px 60px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
+      padding: 20px 60px;
       background: rgba(0,0,0,0.85);
       backdrop-filter: blur(6px);
       border-bottom: 1px solid #1f1f1f;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      text-decoration: none;
-      color: #f2f2f2;
-    }
-
-    .brand img {
-      height: 48px;
+    .logo {
+      height: 90px;
+      width: auto;
+      display: block;
       opacity: 0.95;
-    }
-
-    .brand span {
-      font-size: 18px;
-      font-weight: 500;
-      letter-spacing: 0.5px;
     }
 
     nav {
@@ -59,88 +43,81 @@
     nav a {
       color: #f2f2f2;
       text-decoration: none;
-      font-size: 13px;
-      letter-spacing: 1.4px;
+      font-size: 14px;
+      letter-spacing: 1px;
       text-transform: uppercase;
       white-space: nowrap;
     }
 
-    /* ================= HERO ================= */
-    .hero {
-      position: relative;
-      min-height: 60vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0.6)), url("yellowcar.png");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      padding: 120px 20px;
+    nav a:hover {
+      color: #ffd700;
     }
 
-    .hero h1 {
+    /* CONTAINER */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    h1 {
       font-size: 48px;
       font-weight: 500;
-      margin-bottom: 16px;
-      max-width: 900px;
+      margin-bottom: 40px;
     }
 
-    .hero p {
+    p {
       font-size: 18px;
       color: #cfcfcf;
-      max-width: 720px;
-      margin: auto;
+      max-width: 780px;
+      margin: 0 auto 40px auto;
     }
 
-    /* ================= PROCESS STEPS ================= */
-    .steps {
-      max-width: 1100px;
-      margin: 80px auto;
-      padding: 0 40px;
+    /* FEATURE GRID */
+    .feature-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 40px;
+      margin-top: 40px;
     }
 
-    .step {
-      background: #111;
-      border: 1px solid #1f1f1f;
-      padding: 28px;
-      border-radius: 12px;
-      text-align: center;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    .feature {
+      background: #141414;
+      border: 2px solid #1f1f1f;
+      padding: 30px 20px;
+      border-radius: 8px;
+      transition: transform 0.3s, border-color 0.3s;
+      text-align: left;
     }
 
-    .step:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 20px rgba(255,255,255,0.05);
+    .feature:hover {
+      transform: translateY(-5px);
+      border-color: #ffd700; /* yellow highlight on hover */
     }
 
-    .step h2 {
+    .feature h3 {
       font-size: 22px;
       margin-bottom: 12px;
     }
 
-    .step p {
+    .feature p {
       font-size: 16px;
-      color: #ccc;
+      margin-bottom: 0;
     }
 
-    /* ================= CTA ================= */
+    /* CTA BUTTON */
     .cta {
       display: inline-block;
-      margin: 60px auto 120px;
+      margin-top: 48px;
       padding: 14px 34px;
       border: 1px solid #f2f2f2;
       text-decoration: none;
       color: #f2f2f2;
-      font-size: 12px;
-      letter-spacing: 1.6px;
+      font-size: 13px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      transition: all 0.2s ease;
-      text-align: center;
+      transition: all 0.3s;
     }
 
     .cta:hover {
@@ -148,30 +125,20 @@
       color: #0a0a0a;
     }
 
-    /* ================= FOOTER ================= */
+    /* FOOTER */
     footer {
       border-top: 1px solid #1f1f1f;
       padding: 40px;
       text-align: center;
-      font-size: 12px;
+      font-size: 13px;
       color: #777;
-      background: #0a0a0a;
+      margin-top: 60px;
     }
 
-    /* ================= MOBILE ================= */
+    /* MOBILE */
     @media (max-width: 768px) {
       header {
         padding: 16px 24px;
-      }
-      .hero h1 {
-        font-size: 36px;
-      }
-      .hero p {
-        font-size: 16px;
-      }
-      .steps {
-        padding: 0 20px;
-        gap: 24px;
       }
     }
   </style>
@@ -180,12 +147,9 @@
 <body>
 
 <header>
-  <a href="index.html" class="brand">
-    <img src="logo.png.png" alt="Dealership-IQ Logo">
-    <span>Dealership-IQ</span>
-  </a>
-
+  <a href="index.html"><img src="logo.png.png" alt="Dealership-IQ" class="logo"></a>
   <nav>
+    <a href="index.html">Home</a>
     <a href="product.html">Product</a>
     <a href="how-it-works.html">How It Works</a>
     <a href="pricing.html">Pricing</a>
@@ -193,41 +157,31 @@
   </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div>
-    <h1>How Dealership-IQ Works</h1>
-    <p>Confidential, executive-level insight into staff sentiment, culture, and operational risk — delivered monthly to leadership.</p>
-  </div>
-</section>
+<section class="container">
+  <h1>How It Works</h1>
+  <p>Dealership-IQ gathers confidential staff insights and transforms them into actionable intelligence, helping high-performance dealerships optimize engagement, culture, and operational risk.</p>
 
-<!-- PROCESS STEPS -->
-<section class="steps">
-  <div class="step">
-    <h2>Step 1: Survey</h2>
-    <p>Collect anonymous staff feedback through secure, monthly surveys to identify culture and engagement metrics.</p>
-  </div>
-
-  <div class="step">
-    <h2>Step 2: Analyse</h2>
-    <p>Our algorithms and experts review responses to detect operational risks, sentiment shifts, and opportunities for improvement.</p>
-  </div>
-
-  <div class="step">
-    <h2>Step 3: Report</h2>
-    <p>Leadership receives a confidential, executive-level report highlighting key findings and actionable insights.</p>
+  <div class="feature-grid">
+    <div class="feature">
+      <h3>Staff Surveys</h3>
+      <p>Monthly confidential surveys provide real insight into employee sentiment and engagement.</p>
+    </div>
+    <div class="feature">
+      <h3>Data Analysis</h3>
+      <p>Advanced analytics highlight trends, risks, and opportunities across your dealership.</p>
+    </div>
+    <div class="feature">
+      <h3>Executive Dashboards</h3>
+      <p>Interactive dashboards consolidate insights into a clear, actionable format for leadership.</p>
+    </div>
+    <div class="feature">
+      <h3>Recommendations</h3>
+      <p>Receive step-by-step recommendations to improve culture, reduce risk, and increase performance.</p>
+    </div>
   </div>
 
-  <div class="step">
-    <h2>Step 4: Act</h2>
-    <p>Guided recommendations and dashboards help management make informed, timely decisions to improve performance.</p>
-  </div>
-</section>
-
-<!-- CTA -->
-<div style="text-align:center;">
   <a class="cta" href="mailto:info@dealership-iq.com">Request a Private Demo</a>
-</div>
+</section>
 
 <footer>
   © Dealership-IQ
