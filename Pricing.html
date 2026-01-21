@@ -17,11 +17,15 @@
       line-height: 1.65;
     }
 
+    /* ================= HEADER ================= */
     header {
-      padding: 30px 60px;
       display: flex;
+      flex-wrap: wrap;           /* allow nav to wrap on small screens */
       justify-content: space-between;
       align-items: center;
+      padding: 20px 60px;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(6px);
       border-bottom: 1px solid #1f1f1f;
     }
 
@@ -32,19 +36,26 @@
       opacity: 0.95;
     }
 
-    header nav a {
+    nav {
+      display: flex;
+      flex-wrap: wrap;           /* wrap nav links if needed */
+      gap: 32px;
+    }
+
+    nav a {
       color: #f2f2f2;
       text-decoration: none;
-      margin-left: 32px;
       font-size: 14px;
       letter-spacing: 1px;
       text-transform: uppercase;
+      white-space: nowrap;
     }
 
-    header nav a:hover {
+    nav a:hover {
       color: #ffd700;
     }
 
+    /* ================= MAIN CONTENT ================= */
     .container {
       max-width: 1100px;
       margin: auto;
@@ -145,13 +156,20 @@
       color: #777;
       margin-top: 60px;
     }
+
+    /* ================= MOBILE ================= */
+    @media (max-width: 768px) {
+      header {
+        padding: 16px 24px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
 <header>
-  <img src="logo.png.png" alt="Dealership-IQ" class="logo">
+  <a href="index.html"><img src="logo.png.png" alt="Dealership-IQ" class="logo"></a>
   <nav>
     <a href="index.html">Home</a>
     <a href="product.html">Product</a>
