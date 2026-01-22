@@ -20,7 +20,7 @@
     /* ================= HEADER ================= */
     header {
       display: flex;
-      flex-wrap: wrap;       /* allow nav to wrap on small screens */
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       padding: 20px 60px;
@@ -60,6 +60,7 @@
       max-width: 1100px;
       margin: auto;
       padding: 80px 40px;
+      text-align: center; /* ✅ FIX */
     }
 
     h1, h2 {
@@ -82,7 +83,7 @@
       font-size: 18px;
       color: #cfcfcf;
       max-width: 780px;
-      margin-bottom: 20px;
+      margin: 0 auto 20px auto; /* ✅ FIX */
     }
 
     .feature-grid {
@@ -98,6 +99,7 @@
       padding: 30px 20px;
       border-radius: 8px;
       transition: transform 0.3s, border-color 0.3s;
+      text-align: center; /* ✅ FIX */
     }
 
     .feature:hover {
@@ -158,6 +160,7 @@
     <a href="contact.html">Contact</a>
   </nav>
 </header>
+
 <section class="hero">
   <div class="hero-content">
     <h1>Executive-Level Staff Intelligence for High-Performance Dealerships</h1>
@@ -185,7 +188,11 @@
 
 <section class="container">
   <h1>Dealership-IQ Product Features</h1>
-  <p>Dealership-IQ delivers executive-level staff intelligence for high-performance automotive dealerships. Our platform uncovers actionable insights about culture, sentiment, and operational risk — giving leadership the clarity needed to make strategic decisions.</p>
+  <p>
+    Dealership-IQ delivers executive-level staff intelligence for high-performance automotive dealerships.
+    Our platform uncovers actionable insights about culture, sentiment, and operational risk — giving leadership
+    the clarity needed to make strategic decisions.
+  </p>
 
   <div class="feature-grid">
     <div class="feature">
@@ -228,4 +235,3 @@
 
 </body>
 </html>
-
