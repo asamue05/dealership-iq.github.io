@@ -3,55 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <title>Dealership-IQ | Executive Staff Intelligence</title>
-
   <meta name="description" content="Confidential monthly staff intelligence for high-performance automotive dealerships.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    body {
+    /* ======= RESET ======= */
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: 'Inter', sans-serif;
       background: #0a0a0a;
       color: #f2f2f2;
       line-height: 1.65;
     }
 
-    /* ================= HEADER ================= */
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-header {
-  display: flex;
-  flex-wrap: wrap;           /* allows nav to wrap on small screens */
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 60px;
-  background: rgba(0,0,0,0.85);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid #1f1f1f;
-}
-
-nav {
-  display: flex;
-  flex-wrap: wrap;           /* wrap nav items if they don't fit */
-  gap: 32px;                 /* space between nav links */
-}
-
-nav a {
-  color: #f2f2f2;
-  text-decoration: none;
-  font-size: 13px;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  white-space: nowrap;       /* prevents splitting words */
-}
+    /* ======= HEADER ======= */
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 60px;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid #1f1f1f;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
     .brand {
       display: flex;
       align-items: center;
       gap: 16px;
-      text-decoration: none;
-      color: #f2f2f2;
     }
 
     .brand img {
@@ -63,57 +58,58 @@ nav a {
       font-size: 18px;
       font-weight: 500;
       letter-spacing: 0.5px;
-    }
-
-    header nav a {
       color: #f2f2f2;
-      text-decoration: none;
-      margin-left: 32px;
-      font-size: 13px;
-      letter-spacing: 1.4px;
-      text-transform: uppercase;
     }
 
-    /* ================= HERO ================= */
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
 
-.hero {
-  background: url('yellowcar.png') center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 0 20px;
-  min-height: 50vh; /* scales naturally on all screens */
-  max-height: 500px; /* optional cap on large screens */
-}
-.hero-content {
-  max-width: 900px;
-}
+    nav a {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      white-space: nowrap;
+      color: #f2f2f2;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* ======= HERO ======= */
+    .hero {
+      position: relative;
+      background: url('yellowcar.png') center/cover no-repeat;
+      min-height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
 
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(
-          circle at top left,
-          rgba(255,255,255,0.05),
-          transparent 60%
-        );
+      background: radial-gradient(circle at top left, rgba(255,255,255,0.05), transparent 60%);
+      z-index: 1;
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
-      max-width: 1100px;
-      padding: 160px 60px;
+      max-width: 900px;
+      padding: 100px 40px;
     }
 
     .hero h1 {
       font-size: 52px;
       font-weight: 500;
-      letter-spacing: -1.2px;
-      max-width: 900px;
+      letter-spacing: -1px;
       margin-bottom: 28px;
     }
 
@@ -121,21 +117,18 @@ nav a {
       font-size: 19px;
       color: #cfcfcf;
       max-width: 720px;
+      margin: 0 auto 28px auto;
     }
-
-    /* ================= CTA ================= */
 
     .cta {
       display: inline-block;
-      margin-top: 48px;
       padding: 14px 34px;
       border: 1px solid #f2f2f2;
-      text-decoration: none;
-      color: #f2f2f2;
-      font-size: 12px;
-      letter-spacing: 1.6px;
       text-transform: uppercase;
-      transition: all 0.2s ease;
+      letter-spacing: 1.5px;
+      font-size: 13px;
+      color: #f2f2f2;
+      transition: all 0.3s;
     }
 
     .cta:hover {
@@ -143,158 +136,192 @@ nav a {
       color: #0a0a0a;
     }
 
-    /* ================= FOOTER ================= */
+    /* ======= MAIN FEATURES ======= */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 40px;
+      text-align: center;
+    }
 
+    h1, h2 {
+      font-weight: 500;
+      letter-spacing: -1px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #cfcfcf;
+      max-width: 780px;
+      margin: 0 auto 40px auto;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .feature {
+      background: #141414;
+      border: 1px solid #1f1f1f;
+      padding: 30px 20px;
+      border-radius: 8px;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+      border-color: #ffd700;
+    }
+
+    .feature h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    /* ======= FOOTER ======= */
     footer {
       border-top: 1px solid #1f1f1f;
       padding: 40px;
       text-align: center;
-      font-size: 12px;
+      font-size: 13px;
       color: #777;
-      background: #0a0a0a;
+      margin-top: 60px;
     }
 
-    /* ================= MOBILE ================= */
-
+    /* ======= RESPONSIVE ======= */
     @media (max-width: 768px) {
       header {
-        padding: 24px;
+        padding: 16px 20px;
+        justify-content: center;
+        gap: 16px;
       }
 
-      .hero-content {
-        padding: 140px 24px;
+      nav {
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .logo {
+        height: 64px;
       }
 
       .hero h1 {
-        font-size: 38px;
+        font-size: 34px;
+        line-height: 1.2;
       }
 
-      .brand span {
+      .hero p {
         font-size: 16px;
       }
+
+      .hero-content {
+        padding: 80px 20px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .feature-grid {
+        gap: 24px;
+      }
+
+      .feature {
+        padding: 24px 18px;
+      }
+
+      .cta {
+        padding: 12px 28px;
+      }
+
+      footer {
+        padding: 32px 20px;
+      }
     }
-    /* ================= MOBILE FIX ================= */
-@media (max-width: 768px) {
 
-  header {
-    padding: 16px 20px;
-    justify-content: center;
-    gap: 16px;
-  }
-
-  nav {
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .logo {
-    height: 64px;
-  }
-
-  .hero {
-  min-height: 50vh; /* slightly shorter for mobile */
-  padding: 0 16px;
-}
-
-.hero h1 {
-  font-size: 28px;
-  line-height: 1.2;
-}
-
-.hero p {
-  font-size: 15px;
-  max-width: 90%;
-  margin: 0 auto;
-}
-
-.hero .cta {
-  margin-top: 24px;
-  padding: 10px 24px;
-  font-size: 12px;
-}
-
-  .container {
-    padding: 60px 20px;
-  }
-
-  h1 {
-    font-size: 34px;
-  }
-
-  h2 {
-    font-size: 24px;
-  }
-
-  p {
-    font-size: 16px;
-  }
-
-  .feature-grid {
-    gap: 24px;
-  }
-
-  .feature {
-    padding: 24px 18px;
-  }
-
-  .cta {
-    margin-top: 36px;
-    padding: 12px 28px;
-  }
-
-  footer {
-    padding: 32px 20px;
-  }
-}
     @media (max-width: 480px) {
-  .hero {
-    background-position: center top; /* show the car properly on small phones */
-  }
-}
+      .hero {
+        background-position: center top;
+      }
+    }
   </style>
 </head>
 
 <body>
-
-<header>
-  <a href="index.html" class="brand">
-    <img src="logo.png.png" alt="Dealership-IQ Logo">
-    <span>Dealership-IQ</span>
-  </a>
-
-  <nav>
-    <a href="product.html">Product</a>
-    <a href="how-it-works.html">How It Works</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content">
-    <h1>
-      Executive-Level Staff Intelligence<br>
-      for High-Performance Dealerships
-    </h1>
-
-    <p>
-      Dealership-IQ delivers confidential, monthly insight into staff sentiment,
-      culture, and operational risk — giving leadership clarity where silence
-      usually lives.
-    </p>
-
-    <a class="cta" href="mailto:info@dealership-iq.com">
-      Request a Private Demo
+  <header>
+    <a href="index.html" class="brand">
+      <img src="logo.png.png" alt="Dealership-IQ Logo" class="logo">
+      <span>Dealership-IQ</span>
     </a>
-  </div>
-</section>
 
-<footer>
-  © Dealership-IQ
-</footer>
+    <nav>
+      <a href="product.html">Product</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Executive-Level Staff Intelligence<br>for High-Performance Dealerships</h1>
+      <p>Dealership-IQ delivers confidential, monthly insight into staff sentiment, culture, and operational risk — giving leadership clarity where silence usually lives.</p>
+      <a class="cta" href="mailto:info@dealership-iq.com">Request a Private Demo</a>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="container">
+    <h1>Why Dealership-IQ?</h1>
+    <p>Our platform provides executive staff intelligence to help high-performance dealerships monitor staff sentiment, culture, and operational risk — giving leadership clarity and actionable insights.</p>
+
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>Monthly Staff Reports</h3>
+        <p>Receive confidential, easy-to-read monthly reports highlighting staff sentiment, engagement, and potential risks within your dealership.</p>
+      </div>
+      <div class="feature">
+        <h3>Culture Insights</h3>
+        <p>Understand the underlying culture of your dealership with advanced analytics, so leadership can proactively address issues before they escalate.</p>
+      </div>
+      <div class="feature">
+        <h3>Operational Risk Monitoring</h3>
+        <p>Track operational risks in real-time and identify areas needing attention, from staff turnover to process inefficiencies.</p>
+      </div>
+      <div class="feature">
+        <h3>Executive Dashboards</h3>
+        <p>Access interactive dashboards that consolidate data across all departments, making it simple to make data-driven leadership decisions.</p>
+      </div>
+      <div class="feature">
+        <h3>Secure & Confidential</h3>
+        <p>All staff responses are fully anonymous and encrypted to ensure trust and honest feedback, maintaining confidentiality at all times.</p>
+      </div>
+      <div class="feature">
+        <h3>Actionable Recommendations</h3>
+        <p>Our platform doesn’t just show you data — it provides recommendations and next steps to help improve engagement and reduce risk.</p>
+      </div>
+    </div>
+
+    <a class="cta" href="mailto:info@dealership-iq.com">Request a Private Demo</a>
+  </section>
+
+  <footer>
+    © Dealership-IQ
+  </footer>
 </body>
 </html>
 
