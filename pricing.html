@@ -5,10 +5,10 @@
   <title>Dealership-IQ | Pricing</title>
   <meta name="description" content="Explore Dealership-IQ's premium pricing for executive staff intelligence.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
+    /* ================= GLOBAL ================= */
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -16,11 +16,14 @@
       color: #f2f2f2;
       line-height: 1.65;
     }
+    a { text-decoration: none; }
 
     /* ================= HEADER ================= */
     header {
+      position: relative;      /* fixes nav click issue */
+      z-index: 1000;
       display: flex;
-      flex-wrap: wrap;           /* allow nav to wrap on small screens */
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       padding: 20px 60px;
@@ -35,29 +38,74 @@
       display: block;
       opacity: 0.95;
     }
-       .brand span {
-      font-size: 18px;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-    }
 
     nav {
       display: flex;
-      flex-wrap: wrap;           /* wrap nav links if needed */
+      flex-wrap: wrap;
       gap: 32px;
     }
 
     nav a {
       color: #f2f2f2;
-      text-decoration: none;
+      text-transform: uppercase;
       font-size: 14px;
       letter-spacing: 1px;
-      text-transform: uppercase;
       white-space: nowrap;
+      transition: color 0.3s;
     }
 
     nav a:hover {
       color: #ffd700;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      position: relative;      /* below header */
+      z-index: 1;
+      background: url('yellowcar.png') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #f2f2f2;
+      min-height: 50vh;
+      max-height: 500px;
+      padding: 0 20px;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 500;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #cfcfcf;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 14px 34px;
+      border: 1px solid #f2f2f2;
+      color: #f2f2f2;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      transition: all 0.3s;
+    }
+
+    .cta:hover {
+      background: #f2f2f2;
+      color: #0a0a0a;
     }
 
     /* ================= MAIN CONTENT ================= */
@@ -73,10 +121,7 @@
       letter-spacing: -1px;
     }
 
-    h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
+    h1 { font-size: 48px; margin-bottom: 20px; }
 
     p {
       font-size: 18px;
@@ -97,8 +142,8 @@
       border: 1px solid #1f1f1f;
       padding: 40px 30px;
       border-radius: 8px;
-      transition: transform 0.3s, border-color 0.3s;
       text-align: left;
+      transition: transform 0.3s, border-color 0.3s;
     }
 
     .plan:hover {
@@ -135,24 +180,7 @@
       color: #ffd700;
     }
 
-    .cta {
-      display: inline-block;
-      margin-top: 24px;
-      padding: 14px 34px;
-      border: 1px solid #f2f2f2;
-      text-decoration: none;
-      color: #f2f2f2;
-      font-size: 13px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      transition: all 0.3s;
-    }
-
-    .cta:hover {
-      background: #f2f2f2;
-      color: #0a0a0a;
-    }
-
+    /* ================= FOOTER ================= */
     footer {
       border-top: 1px solid #1f1f1f;
       padding: 40px;
@@ -160,172 +188,109 @@
       font-size: 13px;
       color: #777;
       margin-top: 60px;
+      background: #0a0a0a;
     }
 
     /* ================= MOBILE ================= */
     @media (max-width: 768px) {
       header {
-        padding: 16px 24px;
+        padding: 16px 20px;
+        justify-content: center;
+        gap: 16px;
       }
+
+      nav {
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .logo {
+        height: 64px;
+      }
+
+      .hero {
+        min-height: 50vh;
+        padding: 0 16px;
+      }
+
+      .hero h1 { font-size: 28px; }
+      .hero p { font-size: 15px; max-width: 90%; margin: 0 auto; }
+      .hero .cta { padding: 10px 24px; font-size: 12px; margin-top: 24px; }
+
+      .container { padding: 60px 20px; }
+      h1 { font-size: 34px; }
+      h2 { font-size: 24px; }
+      p { font-size: 16px; }
+
+      .pricing-grid { gap: 24px; }
+      .plan { padding: 24px 18px; text-align: center; }
+      .cta { margin-top: 36px; padding: 12px 28px; }
+      footer { padding: 32px 20px; }
     }
-    /* ================= MOBILE FIX ================= */
-@media (max-width: 768px) {
 
-  header {
-    padding: 16px 20px;
-    justify-content: center;
-    gap: 16px;
-  }
-
-  nav {
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .logo {
-    height: 64px;
-  }
-
-  .hero {
-  min-height: 50vh; /* slightly shorter for mobile */
-  padding: 0 16px;
-}
-
-.hero h1 {
-  font-size: 28px;
-  line-height: 1.2;
-}
-
-.hero p {
-  font-size: 15px;
-  max-width: 90%;
-  margin: 0 auto;
-}
-
-.hero .cta {
-  margin-top: 24px;
-  padding: 10px 24px;
-  font-size: 12px;
-}
-
-  .container {
-    padding: 60px 20px;
-  }
-
-  h1 {
-    font-size: 34px;
-  }
-
-  h2 {
-    font-size: 24px;
-  }
-
-  p {
-    font-size: 16px;
-  }
-
-  .feature-grid {
-    gap: 24px;
-  }
-
-  .feature {
-    padding: 24px 18px;
-  }
-
-  .cta {
-    margin-top: 36px;
-    padding: 12px 28px;
-  }
-
-  footer {
-    padding: 32px 20px;
-  }
-}
     @media (max-width: 480px) {
-  .hero {
-    background-position: center top; /* show the car properly on small phones */
-  }
-}
+      .hero { background-position: center top; }
+    }
   </style>
 </head>
 
 <body>
 
-<header>
-  <a href="index.html"><img src="logo.png.png" alt="Dealership-IQ" class="logo"></a>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="product.html">Product</a>
-    <a href="how-it-works.html">How It Works</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-<section class="hero">
-  <div class="hero-content">
-    <h1>Executive-Level Staff Intelligence for High-Performance Dealerships</h1>
-    <p>Dealership-IQ delivers confidential, monthly insight into staff sentiment, culture, and operational risk — giving leadership clarity where silence usually lives.</p>
-    <a class="cta" href="mailto:info@dealership-iq.com">Request a Private Demo</a>
-  </div>
-</section>
+  <header>
+    <a href="index.html"><img src="logo.png.png" alt="Dealership-IQ" class="logo"></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="product.html">Product</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<style>
-.hero {
-  background: url('yellowcar.png') center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 0 20px;
-  min-height: 50vh; /* scales naturally on all screens */
-  max-height: 500px; /* optional cap on large screens */
-}
-.hero-content {
-  max-width: 900px;
-}
-
-.hero-content {
-  max-width: 900px;
-}
-</style>
-
-<section class="container">
-  <h1>Pricing</h1>
-  <p>Dealership-IQ is built for high-performance dealerships and delivered as a premium, enterprise-level service. Our pricing is personalized based on dealership size and scope to ensure maximum value. Request a private demo to discuss your plan.</p>
-
-  <div class="pricing-grid">
-    <div class="plan">
-      <h3>Enterprise Plan</h3>
-      <p>Comprehensive executive staff intelligence package for large dealerships.</p>
-      <ul>
-        <li>Monthly staff reports</li>
-        <li>Culture & operational risk insights</li>
-        <li>Executive dashboards & analytics</li>
-        <li>Actionable recommendations</li>
-        <li>Secure & confidential</li>
-      </ul>
-      <a class="cta" href="mailto:info@dealership-iq.com">Request a Demo</a>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Executive-Level Staff Intelligence for High-Performance Dealerships</h1>
+      <p>Dealership-IQ delivers confidential, monthly insight into staff sentiment, culture, and operational risk — giving leadership clarity where silence usually lives.</p>
+      <a class="cta" href="mailto:info@dealership-iq.com">Request a Private Demo</a>
     </div>
+  </section>
 
-    <div class="plan">
-      <h3>Custom Plan</h3>
-      <p>Tailored solutions for mid-sized dealerships or specialized reporting needs.</p>
-      <ul>
-        <li>All Enterprise features</li>
-        <li>Custom reporting cadence</li>
-        <li>Integration with internal systems</li>
-        <li>Dedicated account manager</li>
-        <li>Optional additional analytics modules</li>
-      </ul>
-      <a class="cta" href="mailto:info@dealership-iq.com">Request a Demo</a>
+  <section class="container">
+    <h1>Pricing</h1>
+    <p>Dealership-IQ is built for high-performance dealerships and delivered as a premium, enterprise-level service. Our pricing is personalized based on dealership size and scope to ensure maximum value. Request a private demo to discuss your plan.</p>
+
+    <div class="pricing-grid">
+      <div class="plan">
+        <h3>Enterprise Plan</h3>
+        <p>Comprehensive executive staff intelligence package for large dealerships.</p>
+        <ul>
+          <li>Monthly staff reports</li>
+          <li>Culture & operational risk insights</li>
+          <li>Executive dashboards & analytics</li>
+          <li>Actionable recommendations</li>
+          <li>Secure & confidential</li>
+        </ul>
+        <a class="cta" href="mailto:info@dealership-iq.com">Request a Demo</a>
+      </div>
+
+      <div class="plan">
+        <h3>Custom Plan</h3>
+        <p>Tailored solutions for mid-sized dealerships or specialized reporting needs.</p>
+        <ul>
+          <li>All Enterprise features</li>
+          <li>Custom reporting cadence</li>
+          <li>Integration with internal systems</li>
+          <li>Dedicated account manager</li>
+          <li>Optional additional analytics modules</li>
+        </ul>
+        <a class="cta" href="mailto:info@dealership-iq.com">Request a Demo</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  © Dealership-IQ
-</footer>
+  <footer>
+    © Dealership-IQ
+  </footer>
 
 </body>
 </html>
