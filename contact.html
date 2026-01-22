@@ -161,6 +161,7 @@
       }
     }
     /* ================= MOBILE FIX ================= */
+/* ================= MOBILE FIX ================= */
 @media (max-width: 768px) {
 
   header {
@@ -179,21 +180,34 @@
   }
 
   .hero {
-    min-height: 380px;
+    min-height: 50vh; /* scales naturally */
     padding: 0 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
   .hero h1 {
-    font-size: 34px;
-    line-height: 1.25;
+    font-size: 28px;
+    line-height: 1.2;
   }
 
   .hero p {
-    font-size: 16px;
+    font-size: 15px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .hero .cta {
+    margin-top: 24px;
+    padding: 10px 24px;
+    font-size: 12px;
   }
 
   .container {
     padding: 60px 20px;
+    text-align: center;
   }
 
   h1 {
@@ -206,23 +220,20 @@
 
   p {
     font-size: 16px;
-  }
-
-  .feature-grid {
-    gap: 24px;
-  }
-
-  .feature {
-    padding: 24px 18px;
-  }
-
-  .cta {
-    margin-top: 36px;
-    padding: 12px 28px;
+    max-width: 90%;
+    margin: 0 auto 20px auto;
   }
 
   footer {
     padding: 32px 20px;
+  }
+
+}
+
+/* ================= SMALL PHONE HERO FIX ================= */
+@media (max-width: 480px) {
+  .hero {
+    background-position: center top; /* ensures car image is visible on tiny phones */
   }
 }
   </style>
