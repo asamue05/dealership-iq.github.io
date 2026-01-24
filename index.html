@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <title>Dealership-IQ | Executive Staff Intelligence</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
@@ -39,6 +38,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 32px;
+      align-items: center;
     }
 
     nav a {
@@ -48,13 +48,31 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       white-space: nowrap;
+      transition: color 0.3s;
     }
 
     nav a:hover {
       color: #ffd700;
     }
 
-    /* ================= HERO (MATCHES HOW IT WORKS) ================= */
+    /* ================= LOGIN BUTTON ================= */
+    .login-btn {
+      border: 1px solid #ffd700;
+      color: #ffd700;
+      padding: 6px 16px;
+      border-radius: 4px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s;
+    }
+
+    .login-btn:hover {
+      background: #ffd700;
+      color: #0a0a0a;
+    }
+
+    /* ================= HERO ================= */
     .hero {
       background: url('yellowcar.png') center/cover no-repeat;
       display: flex;
@@ -69,6 +87,7 @@
 
     .hero-content {
       max-width: 900px;
+      padding: 100px 40px;
     }
 
     .hero h1 {
@@ -134,7 +153,6 @@
 
     /* ================= MOBILE ================= */
     @media (max-width: 768px) {
-
       header {
         padding: 16px 20px;
         justify-content: center;
@@ -152,6 +170,10 @@
 
       .hero {
         min-height: 50vh;
+      }
+
+      .hero-content {
+        padding: 80px 20px;
       }
 
       .hero h1 {
@@ -199,15 +221,14 @@
 <body>
 
 <header>
-  <a href="index.html">
-    <img src="logo.png.png" alt="Dealership-IQ" class="logo">
-  </a>
+  <a href="index.html"><img src="logo.png.png" alt="Dealership-IQ" class="logo"></a>
   <nav>
     <a href="index.html">Home</a>
     <a href="product.html">Product</a>
     <a href="how-it-works.html">How It Works</a>
     <a href="pricing.html">Pricing</a>
     <a href="contact.html">Contact</a>
+    <a href="https://app.dealership-iq.com/login" class="login-btn" target="_blank">Log In</a>
   </nav>
 </header>
 
@@ -239,4 +260,3 @@
 
 </body>
 </html>
-
