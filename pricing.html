@@ -3,89 +3,287 @@
 <head>
   <meta charset="UTF-8" />
   <title>Dealership-IQ | Pricing</title>
+  <meta name="description" content="Explore Dealership-IQ's premium pricing for executive staff intelligence.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    body { margin: 0; font-family: 'Inter', sans-serif; background: #0a0a0a; color: #f2f2f2; line-height: 1.65; }
-    header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 20px 60px; background: rgba(0,0,0,0.85); backdrop-filter: blur(6px); border-bottom: 1px solid #1f1f1f; }
-    .logo { height: 90px; width: auto; opacity: 0.95; }
-    nav { display: flex; flex-wrap: wrap; gap: 32px; align-items: center; }
-    nav a { color: #f2f2f2; text-decoration: none; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; transition: color 0.3s; }
-    nav a:hover { color: #ffd700; }
-    .login-btn { border: 1px solid #ffd700; color: #ffd700; padding: 6px 16px; border-radius: 4px; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s; }
-    .login-btn:hover { background: #ffd700; color: #0a0a0a; }
-
-.hero {
-  position: relative;
-  background: url('yellowcar.png?v=2') center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 0 20px;
-  min-height: 50vh;
-  max-height: 500px;
-  overflow: hidden; /* ensures overlay stays inside */
-}
-
-/* Dark overlay */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* 0.5 = 50% darkness */
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2; /* above overlay */
-  max-width: 900px;
-  padding: 100px 40px;
-}
-    .hero h1 { font-size: 48px; font-weight: 500; margin-bottom: 20px; }
-    .hero p { font-size: 18px; color: #cfcfcf; max-width: 780px; margin: 0 auto 32px auto; }
-    .cta { display: inline-block; padding: 14px 34px; border: 1px solid #f2f2f2; text-decoration: none; color: #f2f2f2; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; transition: all 0.3s; }
-    .cta:hover { background: #f2f2f2; color: #0a0a0a; }
-
-    .container { max-width: 1100px; margin: auto; padding: 80px 40px; text-align: center; }
-    h2 { font-size: 36px; font-weight: 500; margin-bottom: 24px; }
-    p { font-size: 18px; color: #cfcfcf; max-width: 780px; margin: 0 auto 40px auto; }
-
-    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-top: 40px; }
-    .feature { background: #141414; border: 1px solid #1f1f1f; padding: 30px 20px; border-radius: 8px; transition: transform 0.3s, border-color 0.3s; text-align: center; }
-    .feature:hover { transform: translateY(-5px); border-color: #ffd700; }
-    .feature h3 { font-size: 20px; margin-bottom: 12px; }
-
-    footer { border-top: 1px solid #1f1f1f; padding: 40px; text-align: center; font-size: 13px; color: #777; margin-top: 60px; }
-
-    @media (max-width: 768px) {
-      header { padding: 16px 20px; justify-content: center; gap: 16px; }
-      nav { justify-content: center; gap: 20px; }
-      .logo { height: 64px; }
-      .hero { min-height: 50vh; }
-      .hero-content { padding: 80px 20px; }
-      .hero h1 { font-size: 28px; line-height: 1.2; }
-      .hero p { font-size: 15px; max-width: 90%; }
-      .cta { padding: 10px 24px; font-size: 12px; }
-      .container { padding: 60px 20px; }
-      h2 { font-size: 28px; }
-      p { font-size: 16px; max-width: 90%; }
-      .feature-grid { gap: 24px; }
-      .feature { padding: 24px 18px; }
-      footer { padding: 32px 20px; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #f2f2f2;
+      line-height: 1.65;
     }
 
-    @media (max-width: 480px) { .hero { background-position: center top; } }
+    /* ================= HEADER ================= */
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid #1f1f1f;
+    }
+
+    .logo {
+      height: 90px;
+      width: auto;
+      display: block;
+      opacity: 0.95;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+
+    nav a {
+      color: #f2f2f2;
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* Login button */
+    .login-btn {
+      border: 1px solid #ffd700;
+      color: #ffd700;
+      padding: 6px 16px;
+      border-radius: 4px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s;
+    }
+
+    .login-btn:hover {
+      background: #ffd700;
+      color: #0a0a0a;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      position: relative;
+      background: url('yellowcar.png?v=2') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 0 20px;
+      min-height: 50vh;
+      max-height: 500px;
+      overflow: hidden;
+    }
+
+    /* Dark overlay */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      padding: 100px 40px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #cfcfcf;
+      max-width: 720px;
+      margin: 0 auto 32px auto;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 14px 34px;
+      border: 1px solid #f2f2f2;
+      text-decoration: none;
+      color: #f2f2f2;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+    }
+
+    .cta:hover {
+      background: #f2f2f2;
+      color: #0a0a0a;
+    }
+
+    /* ================= CONTAINER ================= */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 36px;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #cfcfcf;
+      max-width: 780px;
+      margin: 0 auto 40px auto;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .plan {
+      background: #141414;
+      border: 1px solid #1f1f1f;
+      padding: 40px 30px;
+      border-radius: 8px;
+      transition: transform 0.3s, border-color 0.3s;
+      text-align: left;
+    }
+
+    .plan:hover {
+      transform: translateY(-5px);
+      border-color: #ffd700;
+    }
+
+    .plan h3 {
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+
+    .plan p {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    .plan ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+    }
+
+    .plan ul li {
+      margin-bottom: 12px;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .plan ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #ffd700;
+    }
+
+    footer {
+      border-top: 1px solid #1f1f1f;
+      padding: 40px;
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+      margin-top: 60px;
+    }
+
+    /* ================= MOBILE ================= */
+    @media (max-width: 768px) {
+      header {
+        padding: 16px 20px;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .logo {
+        height: 64px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+        line-height: 1.2;
+      }
+
+      .hero p {
+        font-size: 15px;
+        max-width: 90%;
+      }
+
+      .hero-content {
+        padding: 60px 20px;
+      }
+
+      .container {
+        padding: 60px 20px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 16px;
+        max-width: 90%;
+      }
+
+      .plan {
+        padding: 24px 18px;
+      }
+
+      .cta {
+        padding: 12px 28px;
+      }
+
+      footer {
+        padding: 32px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        background-position: center top;
+      }
+    }
+
   </style>
 </head>
 
 <body>
+
 <header>
   <a href="index.html"><img src="logo.png.png" alt="Dealership-IQ" class="logo"></a>
   <nav>
@@ -100,18 +298,50 @@
 
 <section class="hero">
   <div class="hero-content">
-    <h1>Simple, Transparent Pricing</h1>
-    <p>Choose a plan that works for your dealership — no hidden fees, no surprises, full transparency on what you get each month.</p>
+    <h1>Premium Executive Staff Intelligence Pricing</h1>
+    <p>Dealership-IQ is tailored for high-performance dealerships. Select the right plan to unlock actionable insights on culture, engagement, and operational risk.</p>
     <a class="cta" href="mailto:info@dealership-iq.com">Request a Private Demo</a>
   </div>
 </section>
 
 <section class="container">
-  <h2>Our Pricing Plans</h2>
-  <p>Flexible packages designed for dealerships of all sizes. Invest in your leadership intelligence and unlock actionable insights for your team.</p>
+  <h2>Our Plans</h2>
+  <p>Pricing is personalized for each dealership based on size and scope. Below are our standard offerings to give an overview of features included.</p>
+
+  <div class="pricing-grid">
+    <div class="plan">
+      <h3>Enterprise Plan</h3>
+      <p>Comprehensive executive staff intelligence package for large dealerships.</p>
+      <ul>
+        <li>Monthly staff reports</li>
+        <li>Culture & operational risk insights</li>
+        <li>Executive dashboards & analytics</li>
+        <li>Actionable recommendations</li>
+        <li>Secure & confidential</li>
+      </ul>
+      <a class="cta" href="mailto:info@dealership-iq.com">Request a Demo</a>
+    </div>
+
+    <div class="plan">
+      <h3>Custom Plan</h3>
+      <p>Tailored solutions for mid-sized dealerships or specialized reporting needs.</p>
+      <ul>
+        <li>All Enterprise features</li>
+        <li>Custom reporting cadence</li>
+        <li>Integration with internal systems</li>
+        <li>Dedicated account manager</li>
+        <li>Optional additional analytics modules</li>
+      </ul>
+      <a class="cta" href="mailto:info@dealership-iq.com">Request a Demo</a>
+    </div>
+  </div>
 </section>
 
-<footer>© Dealership-IQ</footer>
+<footer>
+  © Dealership-IQ
+</footer>
+
 </body>
 </html>
+
 
