@@ -3,103 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <title>Dealership-IQ | Executive Staff Intelligence</title>
-  <meta name="description" content="Confidential monthly staff intelligence for high-performance automotive dealerships.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    /* ===== RESET ===== */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
+      margin: 0;
       font-family: 'Inter', sans-serif;
       background: #0a0a0a;
       color: #f2f2f2;
       line-height: 1.65;
     }
 
-    a { color: inherit; text-decoration: none; }
-
-    /* ===== HEADER ===== */
+    /* ================= HEADER ================= */
     header {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      padding: 16px 60px;
+      padding: 20px 60px;
       background: rgba(0,0,0,0.85);
       backdrop-filter: blur(6px);
       border-bottom: 1px solid #1f1f1f;
-      position: sticky;
-      top: 0;
-      z-index: 100;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 16px;
+    .logo {
+      height: 90px;
+      width: auto;
+      display: block;
+      opacity: 0.95;
     }
-
-    .brand img { height: 90px; }
 
     nav {
       display: flex;
+      flex-wrap: wrap;
       gap: 32px;
     }
 
     nav a {
-      font-size: 13px;
+      color: #f2f2f2;
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 1px;
       text-transform: uppercase;
-      letter-spacing: 1.4px;
-      transition: color 0.3s;
+      white-space: nowrap;
     }
 
-    nav a:hover { color: #ffd700; }
+    nav a:hover {
+      color: #ffd700;
+    }
 
-    /* ===== HERO (STANDARDISED) ===== */
+    /* ================= HERO (MATCHES HOW IT WORKS) ================= */
     .hero {
-      position: relative;
-      min-height: 60vh;
-      background: url('yellowcar.png') center / cover no-repeat;
+      background: url('yellowcar.png') center/cover no-repeat;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      color: #f2f2f2;
       text-align: center;
       padding: 0 20px;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top left, rgba(255,255,255,0.06), transparent 60%);
+      min-height: 50vh;
+      max-height: 500px;
     }
 
     .hero-content {
-      position: relative;
-      z-index: 2;
       max-width: 900px;
     }
 
     .hero h1 {
-      font-size: 52px;
+      font-size: 48px;
       font-weight: 500;
-      letter-spacing: -1px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     .hero p {
-      font-size: 19px;
+      font-size: 18px;
       color: #cfcfcf;
-      max-width: 720px;
-      margin: 0 auto 28px;
+      max-width: 780px;
+      margin: 0 auto 32px auto;
     }
 
     .cta {
       display: inline-block;
       padding: 14px 34px;
       border: 1px solid #f2f2f2;
+      text-decoration: none;
+      color: #f2f2f2;
       font-size: 13px;
       letter-spacing: 1.5px;
       text-transform: uppercase;
@@ -111,7 +101,7 @@
       color: #0a0a0a;
     }
 
-    /* ===== CONTENT ===== */
+    /* ================= CONTAINER ================= */
     .container {
       max-width: 1100px;
       margin: auto;
@@ -119,66 +109,101 @@
       text-align: center;
     }
 
-    h1 { font-size: 48px; margin-bottom: 20px; }
-    p { font-size: 18px; color: #cfcfcf; max-width: 780px; margin: 0 auto 40px; }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
+    h2 {
+      font-size: 36px;
+      font-weight: 500;
+      margin-bottom: 24px;
     }
 
-    .feature {
-      background: #141414;
-      border: 1px solid #1f1f1f;
-      padding: 30px 20px;
-      border-radius: 8px;
-      transition: transform 0.3s, border-color 0.3s;
+    p {
+      font-size: 18px;
+      color: #cfcfcf;
+      max-width: 780px;
+      margin: 0 auto 40px auto;
     }
 
-    .feature:hover {
-      transform: translateY(-5px);
-      border-color: #ffd700;
-    }
-
+    /* ================= FOOTER ================= */
     footer {
       border-top: 1px solid #1f1f1f;
       padding: 40px;
       text-align: center;
       font-size: 13px;
       color: #777;
+      margin-top: 60px;
     }
 
-    /* ===== MOBILE ===== */
+    /* ================= MOBILE ================= */
     @media (max-width: 768px) {
-      header { padding: 16px 20px; flex-direction: column; gap: 16px; }
-      nav { gap: 20px; }
 
-      .hero { min-height: 50vh; }
-      .hero h1 { font-size: 34px; }
-      .hero p { font-size: 16px; }
+      header {
+        padding: 16px 20px;
+        justify-content: center;
+        gap: 16px;
+      }
 
-      h1 { font-size: 34px; }
-      p { font-size: 16px; }
+      nav {
+        justify-content: center;
+        gap: 20px;
+      }
 
-      .container { padding: 60px 20px; }
+      .logo {
+        height: 64px;
+      }
+
+      .hero {
+        min-height: 50vh;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+        line-height: 1.2;
+      }
+
+      .hero p {
+        font-size: 15px;
+        max-width: 90%;
+      }
+
+      .cta {
+        padding: 10px 24px;
+        font-size: 12px;
+      }
+
+      .container {
+        padding: 60px 20px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 16px;
+        max-width: 90%;
+      }
+
+      footer {
+        padding: 32px 20px;
+      }
     }
 
     @media (max-width: 480px) {
-      .hero { background-position: center top; }
+      .hero {
+        background-position: center top;
+      }
     }
+
   </style>
 </head>
 
 <body>
 
 <header>
-  <a href="index.html" class="brand">
-    <img src="logo.png.png" alt="Dealership-IQ Logo">
-    <span>Dealership-IQ</span>
+  <a href="index.html">
+    <img src="logo.png.png" alt="Dealership-IQ" class="logo">
   </a>
-
   <nav>
+    <a href="index.html">Home</a>
     <a href="product.html">Product</a>
     <a href="how-it-works.html">How It Works</a>
     <a href="pricing.html">Pricing</a>
@@ -188,30 +213,30 @@
 
 <section class="hero">
   <div class="hero-content">
-    <h1>Executive-Level Staff Intelligence<br>for High-Performance Dealerships</h1>
-    <p>Confidential monthly insight into staff sentiment, culture, and operational risk — giving leadership clarity where silence usually lives.</p>
+    <h1>Executive-Level Staff Intelligence for High-Performance Dealerships</h1>
+    <p>
+      Confidential insight into staff sentiment, culture, and operational risk —
+      delivered monthly to leadership teams who refuse to manage blind.
+    </p>
     <a class="cta" href="mailto:info@dealership-iq.com">Request a Private Demo</a>
   </div>
 </section>
 
 <section class="container">
-  <h1>Why Dealership-IQ?</h1>
-  <p>Executive staff intelligence designed for clarity, discretion, and decisive leadership.</p>
+  <h2>What Is Dealership-IQ?</h2>
+  <p>
+    Dealership-IQ provides leadership teams with confidential, data-driven insight
+    into employee sentiment, engagement, and cultural risk — turning silence into
+    strategic clarity.
+  </p>
 
-  <div class="feature-grid">
-    <div class="feature"><h3>Monthly Staff Reports</h3><p>Clear insight into sentiment, engagement, and risk.</p></div>
-    <div class="feature"><h3>Culture Intelligence</h3><p>Understand issues before they surface publicly.</p></div>
-    <div class="feature"><h3>Operational Risk</h3><p>Identify red flags early across departments.</p></div>
-    <div class="feature"><h3>Executive Dashboards</h3><p>Board-ready visibility, simplified.</p></div>
-    <div class="feature"><h3>Anonymous & Secure</h3><p>Designed for honest feedback.</p></div>
-    <div class="feature"><h3>Actionable Insights</h3><p>Not just data — direction.</p></div>
-  </div>
-
-  <br><br>
-  <a class="cta" href="mailto:info@dealership-iq.com">Request a Private Demo</a>
+  <a class="cta" href="how-it-works.html">See How It Works</a>
 </section>
 
-<footer>© Dealership-IQ</footer>
+<footer>
+  © Dealership-IQ
+</footer>
 
 </body>
 </html>
+
