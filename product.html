@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <title>Dealership-IQ | Product</title>
-  <meta name="description" content="Discover Dealership-IQ's executive staff intelligence features for high-performance automotive dealerships.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Dealership-IQ's executive staff intelligence features for high-performance automotive dealerships.">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    /* ================= BODY ================= */
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -19,8 +19,6 @@
 
     /* ================= HEADER ================= */
     header {
-      position: relative;
-      z-index: 1000; /* ensures nav links are clickable */
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -34,7 +32,6 @@
     .logo {
       height: 90px;
       width: auto;
-      display: block;
       opacity: 0.95;
     }
 
@@ -51,16 +48,14 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       white-space: nowrap;
-      transition: color 0.2s;
     }
 
     nav a:hover {
       color: #ffd700;
     }
 
-    /* ================= HERO ================= */
+    /* ================= HERO (IDENTICAL TO HOW IT WORKS) ================= */
     .hero {
-      position: relative;
       background: url('yellowcar.png') center/cover no-repeat;
       display: flex;
       justify-content: center;
@@ -73,32 +68,24 @@
     }
 
     .hero-content {
-      position: relative;
-      z-index: 2;
       max-width: 900px;
     }
-    .hero-content {
-  padding: 100px 40px;
-}
 
     .hero h1 {
       font-size: 48px;
-      margin-bottom: 20px;
       font-weight: 500;
+      margin-bottom: 20px;
     }
 
     .hero p {
       font-size: 18px;
       color: #cfcfcf;
-      margin-bottom: 40px;
-      max-width: 720px;
-      margin-left: auto;
-      margin-right: auto;
+      max-width: 780px;
+      margin: 0 auto 32px auto;
     }
 
     .cta {
       display: inline-block;
-      margin-top: 24px;
       padding: 14px 34px;
       border: 1px solid #f2f2f2;
       text-decoration: none;
@@ -122,14 +109,10 @@
       text-align: center;
     }
 
-    h1, h2 {
+    h2 {
+      font-size: 36px;
       font-weight: 500;
-      letter-spacing: -1px;
-    }
-
-    h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
 
     p {
@@ -148,11 +131,10 @@
 
     .feature {
       background: #141414;
-      border: 1px solid #1f1f1f;
+      border: 2px solid #1f1f1f;
       padding: 30px 20px;
       border-radius: 8px;
       transition: transform 0.3s, border-color 0.3s;
-      text-align: center;
     }
 
     .feature:hover {
@@ -161,8 +143,13 @@
     }
 
     .feature h3 {
-      font-size: 20px;
+      font-size: 22px;
       margin-bottom: 12px;
+    }
+
+    .feature p {
+      font-size: 16px;
+      margin-bottom: 0;
     }
 
     /* ================= FOOTER ================= */
@@ -173,10 +160,9 @@
       font-size: 13px;
       color: #777;
       margin-top: 60px;
-      background: #0a0a0a;
     }
 
-    /* ================= MOBILE ================= */
+    /* ================= MOBILE (MATCHES HOW IT WORKS) ================= */
     @media (max-width: 768px) {
       header {
         padding: 16px 20px;
@@ -193,29 +179,36 @@
         height: 64px;
       }
 
+      .hero {
+        min-height: 50vh;
+      }
+
       .hero h1 {
-        font-size: 34px;
-        line-height: 1.25;
+        font-size: 28px;
+        line-height: 1.2;
       }
 
       .hero p {
-        font-size: 16px;
+        font-size: 15px;
+        max-width: 90%;
+      }
+
+      .cta {
+        padding: 10px 24px;
+        font-size: 12px;
       }
 
       .container {
         padding: 60px 20px;
       }
 
-      h1 {
-        font-size: 34px;
-      }
-
       h2 {
-        font-size: 24px;
+        font-size: 28px;
       }
 
       p {
         font-size: 16px;
+        max-width: 90%;
       }
 
       .feature-grid {
@@ -226,27 +219,15 @@
         padding: 24px 18px;
       }
 
-      .cta {
-        margin-top: 36px;
-        padding: 12px 28px;
-      }
-
       footer {
         padding: 32px 20px;
       }
     }
 
-@media (max-width: 768px) {
-  .hero-content {
-    padding: 80px 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    background-position: center top;
-  }
-}
+    @media (max-width: 480px) {
+      .hero {
+        background-position: center top;
+      }
     }
   </style>
 </head>
@@ -267,44 +248,50 @@
 <section class="hero">
   <div class="hero-content">
     <h1>Executive-Level Staff Intelligence for High-Performance Dealerships</h1>
-    <p>Dealership-IQ delivers confidential, monthly insight into staff sentiment, culture, and operational risk — giving leadership clarity where silence usually lives.</p>
+    <p>
+      Dealership-IQ delivers confidential, monthly insight into staff sentiment,
+      culture, and operational risk — giving leadership clarity where silence usually lives.
+    </p>
     <a class="cta" href="mailto:info@dealership-iq.com">Request a Private Demo</a>
   </div>
 </section>
 
 <section class="container">
-  <h1>Product Features</h1>
-  <p>Dealership-IQ provides executive-level staff intelligence for high-performance automotive dealerships. Our platform uncovers actionable insights about culture, sentiment, and operational risk — giving leadership clarity to make strategic decisions.</p>
+  <h2>Product Features</h2>
+  <p>
+    Dealership-IQ provides executive-level staff intelligence designed specifically
+    for high-performance automotive dealerships.
+  </p>
 
   <div class="feature-grid">
     <div class="feature">
       <h3>Monthly Staff Reports</h3>
-      <p>Confidential monthly reports highlighting staff sentiment, engagement, and potential risks.</p>
+      <p>Confidential reports highlighting sentiment, engagement, and emerging risks.</p>
     </div>
 
     <div class="feature">
       <h3>Culture Insights</h3>
-      <p>Understand underlying culture and proactively address issues before they escalate.</p>
+      <p>Surface cultural blind spots before they impact performance or retention.</p>
     </div>
 
     <div class="feature">
       <h3>Operational Risk Monitoring</h3>
-      <p>Track operational risks in real-time, from staff turnover to process inefficiencies.</p>
+      <p>Identify structural risks across departments and leadership layers.</p>
     </div>
 
     <div class="feature">
       <h3>Executive Dashboards</h3>
-      <p>Interactive dashboards consolidate data across departments for simple data-driven decisions.</p>
+      <p>Clear, consolidated dashboards built for decision-makers — not analysts.</p>
     </div>
 
     <div class="feature">
       <h3>Secure & Confidential</h3>
-      <p>All responses are anonymous and encrypted, ensuring trust and confidentiality at all times.</p>
+      <p>Anonymous, encrypted responses to protect trust and integrity.</p>
     </div>
 
     <div class="feature">
       <h3>Actionable Recommendations</h3>
-      <p>Receive clear recommendations and next steps to improve engagement and reduce risk.</p>
+      <p>Clear next steps aligned to dealership realities.</p>
     </div>
   </div>
 
@@ -317,4 +304,3 @@
 
 </body>
 </html>
-
