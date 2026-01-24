@@ -77,6 +77,9 @@
       z-index: 2;
       max-width: 900px;
     }
+    .hero-content {
+  padding: 100px 40px;
+}
 
     .hero h1 {
       font-size: 48px;
@@ -233,10 +236,17 @@
       }
     }
 
-    @media (max-width: 480px) {
-      .hero {
-        background-position: center top;
-      }
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 80px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    background-position: center top;
+  }
+}
     }
   </style>
 </head>
