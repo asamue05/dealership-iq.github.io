@@ -58,7 +58,12 @@
     h2 { font-size: 36px; font-weight: 500; margin-bottom: 24px; }
     p { font-size: 18px; color: #cfcfcf; max-width: 780px; margin: 0 auto 40px auto; }
 
-    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-top: 40px; }
+   .feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 40px;
+  margin-top: 40px;
+}
     .feature { background: #141414; border: 1px solid #1f1f1f; padding: 30px 20px; border-radius: 8px; transition: transform 0.3s, border-color 0.3s; text-align: center; }
     .feature:hover { transform: translateY(-5px); border-color: #ffd700; }
     .feature h3 { font-size: 20px; margin-bottom: 12px; }
@@ -77,7 +82,9 @@
       .container { padding: 60px 20px; }
       h2 { font-size: 28px; }
       p { font-size: 16px; max-width: 90%; }
-      .feature-grid { gap: 24px; }
+     .feature-grid {
+  grid-template-columns: 1fr; /* stack on mobile */
+}
       .feature { padding: 24px 18px; }
       footer { padding: 32px 20px; }
     }
